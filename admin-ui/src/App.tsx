@@ -25,6 +25,10 @@ import { ProductList } from "./product/ProductList";
 import { ProductCreate } from "./product/ProductCreate";
 import { ProductEdit } from "./product/ProductEdit";
 import { ProductShow } from "./product/ProductShow";
+import { VipUserList } from "./vipUser/VipUserList";
+import { VipUserCreate } from "./vipUser/VipUserCreate";
+import { VipUserEdit } from "./vipUser/VipUserEdit";
+import { VipUserShow } from "./vipUser/VipUserShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -85,6 +89,13 @@ const App = (): React.ReactElement => {
           edit={ProductEdit}
           create={ProductCreate}
           show={ProductShow}
+        />
+        <Resource
+          name="VipUser"
+          list={VipUserList}
+          edit={VipUserEdit}
+          create={VipUserCreate}
+          show={VipUserShow}
         />
       </Admin>
     </div>
