@@ -65,3 +65,13 @@ model Product {
   orders      Order[]
   updatedAt   DateTime @updatedAt
 }
+
+model VipUser {
+  cost      Float?
+  createdAt DateTime @default(now())
+  id        String   @id @default(uuid())
+  mobile    Int?
+  status    Int?
+  updatedAt DateTime @updatedAt
+  userName  String
+}
